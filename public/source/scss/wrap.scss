@@ -1,0 +1,125 @@
+@keyframes zoomBackIn {
+  0% {
+    background-size: 120rem;
+  }
+  25% {
+    background-size: 126rem;
+  }
+  50% {
+    background-size: 140rem;
+  }
+  75% {
+    background-size: 128rem;
+  }
+  100% {
+    background-size: 120rem;
+  }
+}
+
+.wrap {
+  width: 100%;
+  height: 56.2222rem;
+  background-image: url(/img/wrapback.png);
+  background-repeat: no-repeat;
+  padding-top: 52%;
+  position: relative;
+  display: flex;
+  background-size: 120rem;
+  background-position: center center;
+  animation-duration: 45s;
+  animation-name: zoomBackIn;
+  animation-iteration-count: infinite;
+
+  &::after {
+    content: "";
+    top: 8.0556rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(
+                    336.94deg,
+                    rgba(13, 22, 52, 0.5) 6.01%,
+                    rgba(13, 22, 52, 0) 48.9%,
+                    rgba(13, 22, 52, 0.5) 87.86%
+    );
+    max-height: 36.3889rem;
+  }
+
+  &::before {
+    content: "";
+    top: 36.3889rem;
+    left: 0;
+    bottom: -3px;
+    right: 0;
+    position: absolute;
+    z-index: 1000;
+    background-image: url(/img/aboutgradient.png);
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat-y: no-repeat;
+  }
+
+  .soc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 1.5556rem;
+    height: 100%;
+    padding-top: 11.1111rem;
+    margin-left: 2.2222rem;
+    z-index: 200;
+    @include sm-block() {
+      display: none;
+    }
+
+    .mail {
+      color: white;
+      font-size: 1.2222rem;
+      transform-origin: 0 0;
+      transform: rotate(-90deg);
+      margin: 0 auto;
+    }
+
+    .youtube {
+      padding-bottom: 2.6667rem;
+    }
+
+    .facebook {
+      padding-bottom: 17.6667rem;
+    }
+
+    .message {
+      padding-top: 1.3333rem;
+    }
+  }
+}
+
+.wrap-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .wrap_slid > * + * {
+    margin-top: -1.6667rem;
+  }
+
+  h3 {
+    font-size: 6.7778rem;
+  }
+}
+
+.wrap_slid {
+  display: flex;
+  flex-direction: column;
+}

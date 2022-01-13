@@ -1,0 +1,37 @@
+.partners{
+  display: flex;
+  justify-content: center;
+  padding-top:3.556rem;
+  padding-bottom:3.111rem;
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    h4{
+      border-left: 2px solid #23293F;
+      padding-left:1rem;
+    }
+  }
+  .partner-img{
+    display: flex;
+  }
+  .partner-img img{
+       display: block;
+    &:nth-child(1){
+      margin-right:5.167rem;
+      width:11.444rem;
+      height:3.444rem;
+    }
+    &:nth-child(2){
+      margin-right:5.167rem;
+      width:9.333rem;
+      height:4.722rem;
+    }
+    &:nth-child(3){
+      padding-right:0;
+      width:5.556rem;
+      height:5.556rem;
+    }
+    
+  }
+}

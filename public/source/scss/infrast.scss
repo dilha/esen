@@ -1,0 +1,207 @@
+.infrast {
+  background: url(/img/slid.png);
+  height: 55.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  @include rem(padding-top, 69px);
+  @include sm-block() {
+    height: inherit;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    .container {
+      flex-direction: column;
+    }
+  }
+}
+
+.infr-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include sm-block() {
+    position: relative;
+  }
+  font-size: 1.8889rem;
+  color: white;
+
+  @include rem(height, 45px);
+  @include rem(padding-left, 17px);
+  border-left: 1px solid #fff;
+  display: flex;
+  align-items: center;
+
+}
+
+.projects_box {
+  @include sm-block() {
+    flex-wrap: wrap;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 15.611rem;
+
+  right: -5.5556rem;
+
+  width: 37.6111rem;
+  height: 20.9444rem;
+  border: 2px solid rgba(255, 255, 255, 0.69);
+  @include rem(padding, 9px);
+  display: flex;
+  z-index: 15;
+
+  &_src {
+    background: url(/img/inf/cafe.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+  }
+
+  @include sm-block() {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.button-slider {
+  display: block;
+  border: 0.1111rem solid white;
+  position: absolute;
+  background-color: rgba(35, 41, 63, 0.5);
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 8rem;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.69);
+    bottom: calc(100% + 0.7rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 1px;
+    //@include rem(width, 815px);
+    background-color: #fff;
+    bottom: calc(100% + 8.7rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &.active {
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &-page1 {
+    top: 44.27rem;
+    left: 8.6rem;
+
+    &:after {
+      @include rem(width, 815px);
+      bottom: calc(100% + 16.7rem);
+    }
+    &:before{
+      height: 16rem;
+    }
+  }
+
+  &-page2 {
+    @include rem(top, 827px);
+    @include rem(left, 271px);
+
+    &:after {
+      @include rem(width, 700px);
+      bottom: calc(100% + 16.7rem);
+    }
+    &:before{
+      height: 16rem;
+    }
+  }
+
+  &-page3 {
+    @include rem(top, 574px);
+    @include rem(left, 452px);
+
+    &:after {
+      @include rem(width, 518px);
+    }
+  }
+
+  &-page4 {
+    @include rem(top, 842px);
+    @include rem(left, 655px);
+
+    &:after {
+      @include rem(width, 315px);
+    }
+  }
+
+  &-page5 {
+    @include rem(top, 631px);
+    @include rem(left, 722px);
+
+    &:after {
+      @include rem(width, 250px);
+    }
+  }
+
+  &-page6 {
+    @include rem(top, 865px);
+    @include rem(left, 1028px);
+
+    &:before {
+      @include rem(height, 127px);
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  @include sm-block() {
+    position: relative;
+    top: 0;
+    left: 0;
+    & + & {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.container_pagi {
+  @include sm-block() {
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}

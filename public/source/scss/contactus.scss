@@ -1,0 +1,63 @@
+.contact-us {
+  background-image: url(/img/contact_us/mapiwe.png);
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  @include sm-block() {
+    background-size: cover;
+  }
+  .contact-us__content {
+    background-image: url(/img/contacts.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-top: 3.3889rem;
+    width: 30.8333rem;
+    margin-bottom: 3.3889rem;
+    z-index: 1000;
+    margin-left: 3rem;
+  }
+  .contact-us__column {
+    h2 {
+      font-size: 1.5556rem;
+      padding-bottom: 2.2778rem;
+      padding-top: 2.2778rem;
+      margin-left: 4.111rem;
+    }
+    a {
+      display: block;
+      color: black;
+      font-size: 1.1111rem;
+      @include sm-block() {
+        font-size: 1.5rem;
+      }
+    }
+    .link1 {
+      font-weight: bold;
+      background: url(/img/contact_us/call.png) left no-repeat;
+      line-height: 2.556rem;
+      padding-left: 2.6667rem;
+      margin-bottom: 2.1111rem;
+      margin-left: 4.111rem;
+      
+      
+    }
+    .link2 {
+      background: url(/img/contact_us/maiil.png) left no-repeat;
+      line-height: 1.5556rem;
+      padding-left: 2.6667rem;
+      margin-bottom: 2.1111rem;
+      margin-left: 4.111rem;
+    }
+    .link3 {
+      background: url(/img/contact_us/mestopolijenie.png) left no-repeat;
+      line-height: 2.5556rem;
+      padding-left: 2.6667rem;
+      margin-bottom: 3.444rem;
+      margin-left: 4.111rem;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.about {
+  display: flex;
+  justify-content: center;
+  margin-top: -6.6667rem;
+  z-index: 1001;
+  position: relative;
+  background: url(/img/Esentai.png) bottom repeat-x;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about-title {
+  font-size: 1.8889rem;
+  margin-bottom: 2.3333rem;
+  padding-left: 1rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #23293F;
+}
+
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+}
+
+.about-top__column {
+  img {
+    margin-bottom: 1.1667rem;
+    width: 2.4444rem;
+    height: 2.4444rem;
+  }
+
+  h4 {
+    margin-bottom: 0.4444rem;
+    text-transform: uppercase;
+  }
+
+  &:nth-child(1) {
+    max-width: 16.1111rem;
+  }
+
+  &:nth-child(2) {
+    max-width: 14.3333rem;
+  }
+
+  &:nth-child(3) {
+    min-width: 12.7778rem;
+  }
+
+  &:nth-child(4) {
+    max-width: 14.4444rem;
+  }
+
+  @include sm-block() {
+    width: 100%;
+    max-width: 100% !important;
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.about-bottom__title {
+  font-size: 5.5rem;
+  margin-top: 6.1111rem;
+padding-left: 1rem;
+  h3 {
+    font-size: 2.3333rem;
+  }
+}
+
+.about-bottom {
+  display: flex;
+  margin-top: 2.9444rem;
+  max-width: 41.5556rem;
+  margin-bottom: 5.5556rem;
+  padding-left: 1rem;
+  @include sm-block() {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.about-bottom__column {
+
+  @include sm-block() {
+    & + & {
+      margin-top: 2rem;
+    }
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+  }
+
+  &:nth-child(1) {
+    margin-right: 2.3889rem;
+
+    h5 {
+      padding-left: 1.1111rem;
+      font-size: 1.8889rem;
+    }
+
+    max-width: 18.8889rem;
+    @include sm-block() {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    h5 {
+      padding-left: 1.0556rem;
+      font-size: 1.8889rem;
+    }
+
+    max-width: 20.2778rem;
+    @include sm-block() {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+.about-btm__title {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.1111rem;
+  }
+}
+
+.about-img {
+  position: absolute;
+  right: 0;
+  bottom: 3.1111rem;
+  @include sm-block() {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 19rem;
+    height: 31.4233rem;
+    @include sm-block() {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+

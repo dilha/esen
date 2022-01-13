@@ -1,0 +1,126 @@
+.newspage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include rem(padding-bottom, 73px);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page-title {
+  font-size: 1.8889rem;
+  margin-top: 2.1667rem;
+}
+
+.news-column {
+
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  margin-top: 2.3889rem;
+
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 12.7778rem;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(258.52deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
+    background-position: center center;
+    @include sm-block() {
+      display: none;
+    }
+
+  }
+
+
+  .column1-text {
+    @include rem(padding-top, 64px);
+    @include rem(padding-bottom, 53px);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include sm-block() {
+      width: 100%;
+      background-color: #192038;
+      padding: 2rem 2rem;
+    }
+
+    .column1-title {
+      font-size: 1.8889rem;
+      text-transform: uppercase;
+    }
+
+    .avtor {
+      @include rem(margin, 17px 0);
+    }
+
+    .paragraf-news {
+      width: 23.2222rem;
+      margin-bottom: 0rem;
+    }
+
+    .readmorenews {
+      color: white;
+      background: url(/img/news/arrowright.png) right no-repeat;
+      padding-right: 1.1667rem;
+      display: flex;
+      @include rem(margin-top, 30px);
+    }
+  }
+
+  .news-column1 {
+    background: url(/img/news/newsback1.png) no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-size: contain;
+    @include rem(padding-right, 118px);
+    @include rem(padding-left, 51px);
+    @include sm-block() {
+      padding: 0;
+      @include rem(padding-top, 450px);
+      @include rem(background-size, auto 450px);
+      background-position: top center;
+      background-color: #dbdbdb;
+    }
+
+  }
+
+  &:nth-child(2n) {
+    .news-column1 {
+      justify-content: flex-start;
+      background-position: right center;
+      @include sm-block() {
+        padding: 0;
+        @include rem(padding-top, 450px);
+        @include rem(background-size, auto 450px);
+        background-position: top center;
+        background-color: #dbdbdb;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 19.4444rem;
+      bottom: 0;
+      background: linear-gradient(258.52deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    }
+  }
+}
+
+
+
+

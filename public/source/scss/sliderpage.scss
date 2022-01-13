@@ -1,0 +1,41 @@
+.slider-page {
+  background: url(/img/projects/caferest.png) 100% 100% no-repeat;
+  width: 100%;
+  height: 33.1111rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-right: 50%;
+
+    background: linear-gradient(
+                    258.52deg,
+                    #192038 62.17%,
+                    rgba(25, 32, 56, 0) 86.73%
+    );
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  .slider-content {
+    position: absolute;
+    z-index: 1000;
+  }
+  .slider-content__title {
+    font-size: 1.8889rem;
+    padding-top: 9.8889rem;
+  }
+  .slider-content__data {
+    margin-top: 1.1667rem;
+    background: url(/img/icons/calendar.png) left no-repeat;
+    padding-left: 1.5556rem;
+  }
+  .slider-content__paragraf {
+    max-width: 24.2222rem;
+    margin-top: 1.1667rem;
+  }
+}

@@ -1,0 +1,134 @@
+.page-projects {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    flex-direction: column;
+  }
+
+  .projects1-title {
+    font-size: 1.8889rem;
+    padding-top: 2.2778rem;
+  }
+}
+
+.contain2 {
+  height: 64.1667rem;
+  margin-top: 4.7778rem;
+  margin-bottom: 4.7778rem;
+  position: relative;
+  @include sm-block() {
+    height: inherit;
+  }
+
+  .contain2-column {
+    display: flex;
+
+    &-img {
+      @include rem(width, 559px);
+      @include rem(height, 370px);
+      @include sm-block() {
+        height: inherit;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    justify-content: space-between;
+
+    .contain2-column-title {
+      width: 33.1111rem;
+      height: 20.5556rem;
+      @include sm-block() {
+        height: inherit;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding-right: 2.0556rem;
+      border-right: 0.0556rem solid black;
+      background: url(/img/page2/text1.png) right center no-repeat;
+
+      h5 {
+        font-size: 2.4444rem;
+      }
+
+      p {
+        font-size: 1.7778rem;
+      }
+    }
+  }
+
+  .contain2-column2 {
+    display: flex;
+
+    justify-content: space-between;
+
+    .contain2-column-title {
+      width: 33.7222rem;
+      height: 20.5556rem;
+      @include sm-block() {
+        height: inherit;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 2.0556rem;
+      border-left: 0.0556rem solid black;
+      background: url(/img/page2/text2.png) left center no-repeat;
+
+      h5 {
+        font-size: 2.4444rem;
+      }
+
+      p {
+        font-size: 1.7778rem;
+      }
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  background: url(/img/page2/line.png);
+  height: 64.1667rem;
+}
+
+.breadcrum {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    flex-grow: 2;
+    width: 10%;
+    margin-left: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 2px;
+  }
+
+  &-items {
+    position: relative;
+
+    & + & {
+      margin-left: 1rem;
+      padding-left: 1rem;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -0.25rem;
+        top: 50%;
+        height: 4px;
+        width: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

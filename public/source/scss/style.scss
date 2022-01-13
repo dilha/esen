@@ -1,0 +1,163 @@
+@import "smart-grid";
+
+
+@function parseInt($n) {
+  /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px: (); /* 3 */
+  $rem: (); /* 3 */
+
+  @each $value in $values {
+    /* 4 */
+
+    @if $value == 0 or $value == auto {
+      /* 5 */
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    } @else {
+      $unit: unit($value); /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == 'px' {
+        /* 7 */
+        $px: append($px, $value);
+        $rem: append($rem, ($val / 18 + rem));
+      }
+
+      @if $unit == 'rem' {
+        /* 7 */
+        $px: append($px, ($val * 18 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    /* 8 */
+    #{$property}: $px; /* 9 */
+  } @else {
+    #{$property}: $px; /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+@import "nullstyle.scss";
+
+
+@font-face {
+  font-family: "futurabookc";
+  src: url("/fonts/futurabookc.eot");
+  src: local("☺"), url("/fonts/futurabookc.woff") format("woff"),
+  url("/fonts/futurabookc.ttf") format("truetype"),
+  url("/fonts/futurabookc.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background-color: #f1f3fa;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 68.6667rem;
+  padding: 0 0.9444rem;
+  position: relative;
+  display: flex;
+  @include sm-block() {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@import "header.scss";
+@import "wrap.scss";
+@import "about.scss";
+@import "infrast.scss";
+@import "projects.scss";
+@import "sliderpage.scss";
+@import "partners.scss";
+@import "contactus.scss";
+@import "footer.scss";
+
+@import "projectspage.scss";
+@import "news.scss";
+@import "news1.scss";
+@import "infrastpage.scss";
+@import "vacancies.scss";
+@import "contactus.scss";
+
+.text {
+  line-height: 145%;
+  color: #515151;
+}
+
+.projects1 {
+  @include rem(padding-top, 145px);
+}
+
+.project1 {
+  @include rem(padding-top, 145px);
+}
+
+.text-while {
+  color: #fff;
+}
+
+.text-s122 {
+  font-size: 6.7778rem;
+  @include sm-block() {
+    font-size: 8.2778rem;
+  }
+}
+
+.text-s88 {
+  font-size: 4.8889rem;
+  @include sm-block() {
+    font-size: 7.3889rem;
+  }
+}
+
+.text-s99 {
+  font-size: 5.5rem;
+  @include sm-block() {
+    font-size: 6rem;
+  }
+
+}
+
+.text-s42 {
+  font-size: 2.3333rem;
+  @include sm-block() {
+    font-size: 2.8333rem;
+  }
+
+}
+
+.text-s34 {
+  font-size: 1.8889rem;
+  @include sm-block() {
+    font-size: 2.3889rem;
+  }
+}
+
+
+.text-s17 {
+  @include rem(font-size,17px);
+  @include sm-block() {
+    @include rem(font-size,20px);
+  }
+}
+
+
+.text-s15 {
+  @include rem(font-size,15px);
+  @include sm-block() {
+    font-size: 1.3333rem;
+  }
+}

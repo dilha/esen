@@ -1,0 +1,151 @@
+footer {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  height: 15.7222rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #20263c;
+  opacity: 0.9;
+
+  bottom: 0;
+
+  z-index: 10;
+
+  .logo {
+    margin-top: 1.2222rem;
+  }
+
+  .container {
+    display: flex;
+
+    justify-content: space-between;
+    height: 10.5rem;
+    border-bottom: 0.0333rem solid rgba(255, 255, 255, 0.3);
+  }
+
+  .menu {
+    display: flex;
+    width: 100%;
+
+    max-width: 38.5556rem;
+    justify-content: space-between;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: white;
+      font-size: 0.8889rem;
+    }
+  }
+
+  .btn-contact_us {
+    width: 100%;
+    height: 100%;
+    max-width: 9.7778rem;
+    max-height: 2.6667rem;
+    display: flex;
+    align-self: center;
+    
+    
+    
+  }
+
+  .btn-contact_us a {
+    width: 100%;
+    height: 100%;
+    max-width: 9.7778rem;
+    height: 2.6667rem;
+    background-color: #131930;
+    font-size: 0.8889rem;
+    line-height: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+  }
+}
+
+header .deskTop > div {
+  align-items: center;
+}
+
+.deskTop {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include sm-block() {
+    display: none;
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  height: inherit !important;
+
+  .container {
+    height: inherit !important;
+    @include sm-block() {
+      flex-direction: column;
+      .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn-contact_us a {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        line-height: 100%;
+        padding: 1rem 0;
+      }
+      .btn-contact_us {
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+      }
+      .menu > .menu {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        li + li {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.footer1 {
+  max-width: 68.6667rem;
+  padding: 0 0.9444rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container2 {
+  max-width: 68.6667rem;
+  padding: 0 0.9444rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 2.2778rem;
+  margin-bottom: 2.2778rem;
+}
